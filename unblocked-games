@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unblocked Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+        }
+        .game {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .game a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unblocked Games</h1>
+    <div class="game">
+        <a href="games/1v1lol.html">
+            <img src="https://via.placeholder.com/150" alt="1v1.LOL">
+            <p>1v1.LOL</p>
+        </a>
+    </div>
+    <!-- Add more games later -->
+</body>
+</html>
