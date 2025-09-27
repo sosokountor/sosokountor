@@ -596,7 +596,8 @@
             const [projectDescription, setProjectDescription] = useState('');
             const [selectedExpertise, setSelectedExpertise] = useState(null);
 
-            const phoneNumber = "971556690930";
+            // Fixed phone number - using the one you provided (without UAE country code)
+            const phoneNumber = "556990930";
 
             useEffect(() => {
                 setTimeout(() => setLoading(false), 1500);
@@ -699,12 +700,12 @@
                     ? `مرحباً، أريد الاستفسار عن خدمات الطباعة ثلاثية الأبعاد\n\n${projectType}وصف المشروع: ${projectDescription || "سأشرح بالتفصيل"}`
                     : `Hello, I'd like to inquire about your 3D printing services\n\n${projectType}Project Description: ${projectDescription || "I'll provide details"}`;
 
-                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                const url = `https://wa.me/971${phoneNumber}?text=${encodeURIComponent(message)}`;
                 window.open(url, '_blank');
             };
 
             const callPhone = () => {
-                window.open(`tel:${phoneNumber}`, '_self');
+                window.open(`tel:+971${phoneNumber}`, '_self');
             };
 
             const handleExpertiseClick = (expertise) => {
@@ -798,7 +799,6 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
 
                     {/* Project Form Section */}
                     <section className="section">
@@ -900,6 +900,7 @@
                             </div>
                         </div>
                     </section>
+                    </section>
 
                     {/* Contact Section */}
                     <section className="section contact-section">
@@ -912,7 +913,7 @@
                                     <div style={{ margin: '2rem 0' }}>
                                         <div style={{ marginBottom: '1rem' }}>
                                             <strong>📞 {lang === 'ar' ? 'هاتف: ' : 'Phone: '}</strong>
-                                            <span>+{phoneNumber}</span>
+                                            <span>+971 {phoneNumber}</span>
                                         </div>
                                         <div style={{ marginBottom: '1rem' }}>
                                             <strong>📍 {lang === 'ar' ? 'الموقع: ' : 'Location: '}</strong>
@@ -974,7 +975,7 @@
                         <div className="container">
                             <div className="footer-content">
                                 <div className="footer-brand">
-                                    <h4>juniors Printing</h4>
+                                    <h4>Juniors Printing</h4>
                                     <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
                                         {lang === 'ar' ? 
                                             'خدمات طباعة ثلاثية الأبعاد ثورية في الإمارات. من الفكرة إلى التنفيذ، نحقق أفكارك بدقة وسرعة.' :
@@ -1011,7 +1012,7 @@
                             </div>
 
                             <div className="footer-bottom">
-                                <p>© 2025 juniors printing. {lang === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
+                                <p>© 2025 Juniors Printing. {lang === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</p>
                                 <p>🇦🇪 {lang === 'ar' ? 'نخدم الإمارات العربية المتحدة بفخر' : 'Proudly serving the United Arab Emirates'}</p>
                             </div>
                         </div>
@@ -1024,5 +1025,4 @@
         ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 </body>
-</html>\
-<!DOCTYPE html>
+</html>
